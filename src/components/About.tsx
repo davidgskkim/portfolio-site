@@ -1,11 +1,17 @@
 import { JSX } from "react";
 import { FaUser } from "react-icons/fa";
+import profilePic from "../myface.jpg";
 
 function About({ "data-aos": aos }: { "data-aos"?: string }) {
     const UserIcon = FaUser as unknown as () => JSX.Element;
 
     return (
         <section id="about" className="my-12" data-aos={aos}>
+            <img
+                src={profilePic}
+                alt="David Kim"
+                className="w-40 h-40 rounded-full object-cover shadow-lg"
+            />
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-2">
                 <UserIcon /> About Me
             </h2>
