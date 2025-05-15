@@ -28,5 +28,5 @@ You don't need to eject unless you want to customize the build setup.
 
 ## Deployment
 
-This site is deployed and hosted on Vercel, providing fast and reliable access.
+This site is deployed and hosted on Vercel @https://portfolio-site-brown-eta.vercel.app/, providing fast and reliable access.
 
