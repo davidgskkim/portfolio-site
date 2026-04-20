@@ -1,32 +1,73 @@
-# David Kim Portfolio
+# React + TypeScript + Vite
 
-This is a personal portfolio website built with React and Tailwind CSS, showcasing projects and professional info.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Available Scripts
+Currently, two official plugins are available:
 
-In the project directory, you can run:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-### `npm start`
+## React Compiler
 
-Runs the app in development mode at [http://localhost:3000](http://localhost:3000).
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-The page reloads on edits and shows lint errors in the console.
+## Expanding the ESLint configuration
 
-### `npm run build`
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Builds the app for production in the `build` folder, optimizing for best performance.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-### `npm test`
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-Launches the test runner in interactive watch mode.
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-### `npm run eject`
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-**Note:** Ejecting is a one-way operation. It copies configuration files and dependencies into your project for full control.
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-You don't need to eject unless you want to customize the build setup.
-
-## Deployment
-
-This site is deployed and hosted on Vercel @https://portfolio-site-brown-eta.vercel.app/, providing fast and reliable access.
-
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
