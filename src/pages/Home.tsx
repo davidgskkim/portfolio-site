@@ -85,7 +85,7 @@ export const Home = () => {
         <div className="hero-right">
           <div className="profile-photo-wrapper">
             <img
-              src="/profile-placeholder.png"
+              src="/Professional_photo.jpg"
               alt="David Kim"
               className="profile-photo"
             />
