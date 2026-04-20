@@ -1,5 +1,5 @@
 import './Projects.css';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, GithubIcon } from 'lucide-react';
 
 export const Projects = () => {
   const projects = [
@@ -46,7 +46,7 @@ export const Projects = () => {
             </div>
             
             <div className="project-links">
-              <button className="icon-link" aria-label="GitHub Repo"><Github size={20} /></button>
+              <button className="icon-link" aria-label="GitHub Repo"><GithubIcon size={20} /></button>
               <button className="icon-link" aria-label="Live Demo"><ExternalLink size={20} /></button>
             </div>
           </div>
