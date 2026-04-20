@@ -9,6 +9,7 @@ export const Home = () => {
       
       {/* Hero Header */}
       <section className="dashboard-hero">
+        <div className="hero-bg-glow"></div>
         <h2 className="hero-greeting" style={{fontSize: '1rem', color: 'var(--text-secondary)', letterSpacing: '2px', marginBottom: '10px', fontWeight: 600}}>INITIALIZE &lt;PROTOCOL /&gt;</h2>
         <h1 className="hero-title" style={{fontSize: '4.5rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '-1px'}}>
           Hi, I'm <span className="accent-text gradient-glow">David Kim</span>.
