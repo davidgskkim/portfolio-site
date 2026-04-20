@@ -68,7 +68,7 @@ export const Home = () => {
           {/* Contact + Nav Invite */}
           <div className="hero-contact-block">
             <p className="contact-invite">
-              Optimized for humans who value their scroll wheels. I build things that get straight to the point — explore my work via the navigation bar or reach out using the links below.
+              Optimized for humans who value their scroll wheels. I prefer building things that get straight to the point — explore more about who I am via the navigation bar above, or reach out directly using the links below.
             </p>
             <div className="contact-links">
               <a href="mailto:davidgsk.kim@gmail.com" className="contact-icon" title="Email">
