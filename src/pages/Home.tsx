@@ -30,15 +30,19 @@ export const Home = () => {
           <h1 className="hero-title">
             Hi, I'm <span className="gradient-glow">David Kim</span>.
           </h1>
+          <div className="status-badge">
+            <span className="status-dot"></span>
+            Seeking 2026 Roles
+          </div>
 
           <div className="typewriter-container">
             <TypeAnimation
               sequence={[
                 'Software Engineer.',
                 1000,
-                'High-Performance Architect.',
+                '0-to-1 Builder.',
                 1000,
-                'Agentic Systems Builder.',
+                'Severe Claude Addict.',
                 1000,
               ]}
               wrapper="span"
@@ -64,8 +68,7 @@ export const Home = () => {
           {/* Contact + Nav Invite */}
           <div className="hero-contact-block">
             <p className="contact-invite">
-              Feel free to explore via the navbar above and learn all about me!<br/>
-              Don't hesitate to reach out if you're interested in working together.
+              Optimized for humans who value their scroll wheels. I prefer building things that get straight to the point — find my full project history and technical deep-dives in the menu above.
             </p>
             <div className="contact-links">
               <a href="mailto:davidgsk.kim@gmail.com" className="contact-icon" title="Email">
