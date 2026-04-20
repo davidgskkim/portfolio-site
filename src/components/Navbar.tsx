@@ -1,22 +1,26 @@
 import { useTheme } from '../context/ThemeContext';
 import { Moon, Sun } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 export const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
+
+  const isActive = (path: string) => location.pathname === path ? 'active-link' : '';
 
   return (
     <nav className="navbar glass">
       <div className="nav-container">
-        <div className="nav-logo">
+        <Link to="/" className="nav-logo">
           <span className="accent-text">DK</span>
           <span className="logo-hq">/ HQ</span>
-        </div>
+        </Link>
         
         <div className="nav-links">
-          <a href="#about" className="nav-link">About</a>
-          <a href="#projects" className="nav-link">Projects</a>
-          <a href="#hobbies" className="nav-link">Missions</a>
+          <Link to="/" className={`nav-link ${isActive('/')}`}>Home</Link>
+          <Link to="/about" className={`nav-link ${isActive('/about')}`}>About</Link>
+          <Link to="/projects" className={`nav-link ${isActive('/projects')}`}>Projects</Link>
           <button 
             onClick={toggleTheme} 
             className="theme-toggle"
