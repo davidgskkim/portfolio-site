@@ -10,6 +10,8 @@
   --accent-base: #a855f7; /* Neon Purple */
   --accent-glow: rgba(168, 85, 247, 0.4);
   --accent-glow-strong: rgba(168, 85, 247, 0.8);
+  --accent-gradient: linear-gradient(135deg, #c084fc, #a855f7, #9333ea);
+  --accent-gradient-animated: linear-gradient(45deg, #c084fc, #a855f7, #6b21a8, #a855f7, #c084fc);
   --border-subtle: #222;
   --border-neon: #a855f7;
 }
@@ -23,6 +25,8 @@
   --accent-base: #7e22ce; 
   --accent-glow: rgba(126, 34, 206, 0.2);
   --accent-glow-strong: rgba(126, 34, 206, 0.5);
+  --accent-gradient: linear-gradient(135deg, #a855f7, #7e22ce, #581c87);
+  --accent-gradient-animated: linear-gradient(45deg, #a855f7, #7e22ce, #4c1d95, #7e22ce, #a855f7);
   --border-subtle: #e2e8f0;
   --border-neon: #7e22ce;
 }
