@@ -34,9 +34,7 @@
 }
 
 .gradient-glow {
-  background: var(--accent-gradient-animated);
-  background-size: 300% 300%;
-  animation: shimmerGradient 4s ease infinite;
+  background: linear-gradient(to right, #8b5cf6, #d946ef);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
