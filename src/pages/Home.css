@@ -132,30 +132,22 @@
 
 .contact-links {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  gap: 24px;
+  margin-top: 5px;
 }
 
-.contact-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-subtle);
+.contact-icon {
   color: var(--text-secondary);
-  padding: 8px 16px;
-  border-radius: 2px;
-  font-size: 0.9rem;
-  text-decoration: none;
-  transition: all 0.25s ease;
-  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact-chip:hover {
-  border-color: var(--border-neon);
+.contact-icon:hover {
   color: var(--text-primary);
-  box-shadow: 0 0 12px var(--accent-glow);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  filter: drop-shadow(0 0 10px var(--accent-glow-strong));
 }
 
 /* ===== Profile Photo ===== */
@@ -184,13 +176,14 @@
 
 .photo-glow-ring {
   position: absolute;
-  inset: -8px;
-  border-radius: 6px;
-  background: var(--accent-gradient);
+  inset: 0px;
+  border-radius: 4px;
+  background: transparent;
+  box-shadow: 0 0 40px 5px var(--accent-glow-strong);
   z-index: 0;
-  opacity: 0.25;
-  filter: blur(16px);
+  opacity: 0.8;
   animation: pulseGlow 8s infinite alternate ease-in-out;
+  pointer-events: none;
 }
 
 /* ===== Responsive ===== */

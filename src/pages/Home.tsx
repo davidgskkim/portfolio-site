@@ -1,5 +1,5 @@
 import { TypeAnimation } from 'react-type-animation';
-import { Code2, Database, Terminal, Cpu, Layers, Cloud, Smartphone, Globe } from 'lucide-react';
+import { Code2, Database, Terminal, Cpu, Layers, Cloud, Smartphone, Globe, Github, Linkedin, Mail } from 'lucide-react';
 import './Home.css';
 
 export const Home = () => {
@@ -53,14 +53,14 @@ export const Home = () => {
               Don't hesitate to reach out if you're interested in working together.
             </p>
             <div className="contact-links">
-              <a href="mailto:davidgsk.kim@gmail.com" className="contact-chip">
-                <span>📧</span> davidgsk.kim@gmail.com
+              <a href="mailto:davidgsk.kim@gmail.com" className="contact-icon" title="Email">
+                <Mail size={24} />
               </a>
-              <a href="https://github.com/davidgskkim" target="_blank" rel="noreferrer" className="contact-chip">
-                <span>🔗</span> GitHub
+              <a href="https://github.com/davidgskkim" target="_blank" rel="noreferrer" className="contact-icon" title="GitHub">
+                <Github size={24} />
               </a>
-              <a href="#" className="contact-chip">
-                <span>💼</span> LinkedIn
+              <a href="#" className="contact-icon" title="LinkedIn">
+                <Linkedin size={24} />
               </a>
             </div>
           </div>
