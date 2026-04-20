@@ -1,16 +1,17 @@
 import { TypeAnimation } from 'react-type-animation';
 import { Link } from 'react-router-dom';
-import { Terminal, Globe, Mail, Code2 } from 'lucide-react';
+import { Terminal, Globe, Mail, Code2, Database, Cpu, Layers, Cloud, Smartphone } from 'lucide-react';
 import './Home.css';
 
 export const Home = () => {
+  const techIcons = [Code2, Database, Terminal, Cpu, Layers, Cloud, Smartphone, Globe];
+
   return (
     <div className="home-dashboard">
       
       {/* Hero Header */}
       <section className="dashboard-hero">
         <div className="hero-bg-glow"></div>
-        <h2 className="hero-greeting" style={{fontSize: '1rem', color: 'var(--text-secondary)', letterSpacing: '2px', marginBottom: '10px', fontWeight: 600}}>INITIALIZE &lt;PROTOCOL /&gt;</h2>
         <h1 className="hero-title" style={{fontSize: '4.5rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '-1px'}}>
           Hi, I'm <span className="accent-text gradient-glow">David Kim</span>.
         </h1>
@@ -31,6 +32,18 @@ export const Home = () => {
             repeat={Infinity}
             cursor={true}
           />
+        </div>
+
+        {/* Tech Stack Marquee */}
+        <div className="tech-marquee-container">
+          <div className="tech-marquee">
+            <div className="tech-marquee-content">
+              {techIcons.map((Icon, idx) => <Icon key={idx} />)}
+            </div>
+            <div className="tech-marquee-content" aria-hidden="true">
+              {techIcons.map((Icon, idx) => <Icon key={`dup-${idx}`} />)}
+            </div>
+          </div>
         </div>
       </section>
 

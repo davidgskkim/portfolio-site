@@ -13,8 +13,7 @@ export const Navbar = () => {
     <nav className="navbar glass">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <span className="accent-text">DK</span>
-          <span className="logo-hq">/ HQ</span>
+          <span className="accent-text" style={{fontWeight: 700, fontSize: '1.2rem', letterSpacing: '0.5px'}}>David Kim</span>
         </Link>
         
         <div className="nav-links">
